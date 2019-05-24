@@ -7,20 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var app_component_1 = require("./app.component");
-var AppModule = /** @class */ (function () {
-    function AppModule() {
+var MovieListComponent = /** @class */ (function () {
+    function MovieListComponent() {
+        this.pageTitle = 'Movie List';
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+    MovieListComponent = __decorate([
+        core_1.Component({
+            selector: 'mm-movies',
+            templateUrl: 'app/movies/movie-list.component.html'
         })
-    ], AppModule);
-    return AppModule;
+    ], MovieListComponent);
+    return MovieListComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.MovieListComponent = MovieListComponent;
+//# sourceMappingURL=movie-list.component.js.map
