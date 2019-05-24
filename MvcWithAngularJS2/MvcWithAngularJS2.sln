@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWithAngularJS2", "MvcWithAngularJS2\MvcWithAngularJS2.csproj", "{267AFDFB-DB4B-47DF-9E45-44C81A2CABFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularJS2Setup", "AngularJS2Setup\AngularJS2Setup.csproj", "{5D69F0A4-DE4B-412D-9267-730089A67F26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{267AFDFB-DB4B-47DF-9E45-44C81A2CABFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{267AFDFB-DB4B-47DF-9E45-44C81A2CABFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{267AFDFB-DB4B-47DF-9E45-44C81A2CABFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{267AFDFB-DB4B-47DF-9E45-44C81A2CABFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D69F0A4-DE4B-412D-9267-730089A67F26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D69F0A4-DE4B-412D-9267-730089A67F26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D69F0A4-DE4B-412D-9267-730089A67F26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D69F0A4-DE4B-412D-9267-730089A67F26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
