@@ -1,6 +1,6 @@
 ﻿<div class="panel panel-primary">
     <div class="panel-heading">
-        Movie Catalog
+        {{ pageTitle }}
     </div>
 
     <!--Search movie-->
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table">
+            <table class="table" *ngIf="movies.length">
                 <thead>
                     <tr>
                         <th>
@@ -32,10 +32,18 @@
                         <th>Review</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr *ngFor="#movie of movies">
+                        <td></td>
+                        <td>{{movie.movieName}}</td>
+                        <td>{{movie.movieStar}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                        <td>{{movie.price}}</td>
+                        <td>{{movie.starRating}}</td>
+                    </tr>
+                </tbody>
             </table>
             <div>
-
             </div>
         </div>
     </div>
