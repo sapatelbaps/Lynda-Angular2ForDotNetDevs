@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var movie_filter_pipe_1 = require("./movie-filter.pipe");
 var MovieListComponent = /** @class */ (function () {
     function MovieListComponent() {
         this.pageTitle = 'Movie List';
@@ -40,11 +41,15 @@ var MovieListComponent = /** @class */ (function () {
     MovieListComponent.prototype.toggleImage = function () {
         this.seePoster = !this.seePoster;
     };
+    MovieListComponent.prototype.ngOnInit = function () {
+        console.log('Invoked ngonInit.');
+    };
     MovieListComponent = __decorate([
         core_1.Component({
             selector: 'mm-movies',
             templateUrl: 'app/movies/movie-list.component.html',
-            styleUrls: ['app/movies/movie-list.component.css']
+            styleUrls: ['app/movies/movie-list.component.css'],
+            pipes: [movie_filter_pipe_1.MovieFilterPipe]
         })
     ], MovieListComponent);
     return MovieListComponent;

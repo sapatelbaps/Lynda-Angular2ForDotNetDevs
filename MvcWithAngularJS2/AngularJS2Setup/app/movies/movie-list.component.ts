@@ -1,13 +1,15 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { IMovie } from './movie';
+import { MovieFilterPipe } from './movie-filter.pipe'
 
 @Component({
     selector: 'mm-movies',
     templateUrl: 'app/movies/movie-list.component.html',
-    styleUrls: ['app/movies/movie-list.component.css']
+    styleUrls: ['app/movies/movie-list.component.css'],
+    pipes: [MovieFilterPipe]
 })
 
-export class MovieListComponent {
+export class MovieListComponent implements OnInit {
     pageTitle: string = 'Movie List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -38,6 +40,10 @@ export class MovieListComponent {
 
     toggleImage(): void {
         this.seePoster = !this.seePoster;
+    }
+
+    ngOnInit(): void {
+        console.log('Invoked ngonInit.');
     }
 
 }
