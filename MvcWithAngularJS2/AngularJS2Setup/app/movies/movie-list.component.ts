@@ -9,6 +9,7 @@ export class MovieListComponent {
     pageTitle: string = 'Movie List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    seePoster: boolean = false;
 
     movies: any[] = [
         {
@@ -31,5 +32,10 @@ export class MovieListComponent {
             "starRating": 4.8,
             "imageUrl": "http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SY1000_CR0,0,666,1000_AL_.jpg"
         }];
+
+    toggleImage(): void {
+        this.seePoster != this.seePoster;
+    }
+
 }
 
