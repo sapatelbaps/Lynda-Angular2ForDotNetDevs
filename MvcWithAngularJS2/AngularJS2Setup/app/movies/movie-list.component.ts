@@ -1,12 +1,15 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { IMovie } from './movie';
 import { MovieFilterPipe } from './movie-filter.pipe'
+import { ReviewComponent } from '../shared/review.component'
+
 
 @Component({
     selector: 'mm-movies',
     templateUrl: 'app/movies/movie-list.component.html',
     styleUrls: ['app/movies/movie-list.component.css'],
-    pipes: [MovieFilterPipe]
+    pipes: [MovieFilterPipe],
+    directives: [ReviewComponent]
 })
 
 export class MovieListComponent implements OnInit {
@@ -24,7 +27,7 @@ export class MovieListComponent implements OnInit {
             "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
             "releaseDate": "3/13/2016",
             "price": 8.00,
-            "starRating": 4.5,
+            "starRating": 3.5,
             "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
         },
         {
@@ -46,5 +49,8 @@ export class MovieListComponent implements OnInit {
         console.log('Invoked ngonInit.');
     }
 
+    onRatingClicked(message: string): void {
+        this.pageTitle = 'Movie List: ' + message;
+    }
 }
 

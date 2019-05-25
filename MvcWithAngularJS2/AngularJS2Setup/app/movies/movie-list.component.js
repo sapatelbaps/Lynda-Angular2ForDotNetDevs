@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var movie_filter_pipe_1 = require("./movie-filter.pipe");
+var review_component_1 = require("../shared/review.component");
 var MovieListComponent = /** @class */ (function () {
     function MovieListComponent() {
         this.pageTitle = 'Movie List';
@@ -23,7 +24,7 @@ var MovieListComponent = /** @class */ (function () {
                 "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
                 "releaseDate": "3/13/2016",
                 "price": 8.00,
-                "starRating": 4.5,
+                "starRating": 3.5,
                 "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
             },
             {
@@ -44,12 +45,16 @@ var MovieListComponent = /** @class */ (function () {
     MovieListComponent.prototype.ngOnInit = function () {
         console.log('Invoked ngonInit.');
     };
+    MovieListComponent.prototype.onRatingClicked = function (message) {
+        this.pageTitle = 'Movie List: ' + message;
+    };
     MovieListComponent = __decorate([
         core_1.Component({
             selector: 'mm-movies',
             templateUrl: 'app/movies/movie-list.component.html',
             styleUrls: ['app/movies/movie-list.component.css'],
-            pipes: [movie_filter_pipe_1.MovieFilterPipe]
+            pipes: [movie_filter_pipe_1.MovieFilterPipe],
+            directives: [review_component_1.ReviewComponent]
         })
     ], MovieListComponent);
     return MovieListComponent;
