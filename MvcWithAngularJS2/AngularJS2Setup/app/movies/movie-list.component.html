@@ -41,9 +41,9 @@
                                  [style.width.px]="imageWidth" [style.margin.px]="imageMargin" />
                         </td>
                         <td>{{movie.movieName}}</td>
-                        <td>{{movie.movieStar}}</td>
+                        <td>{{movie.movieStar | uppercase}}</td>
                         <td>{{movie.releaseDate}}</td>
-                        <td>{{movie.price}}</td>
+                        <td>{{movie.price | currency:'USD':true:'1.2-2' }}</td>
                         <td>{{movie.starRating}}</td>
                     </tr>
                 </tbody>
