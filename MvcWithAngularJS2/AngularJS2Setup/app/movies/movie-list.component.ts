@@ -1,6 +1,12 @@
 ﻿import { Component } from '@angular/core';
 import { IMovie } from './movie';
 
+@Component({
+    selector: 'mm-movies',
+    templateUrl: 'app/movies/movie-list.component.html',
+    styleUrls: ['app/movies/movie-list.component.css']
+})
+
 export class MovieListComponent {
     pageTitle: string = 'Movie List';
     imageWidth: number = 50;
@@ -27,11 +33,11 @@ export class MovieListComponent {
             "releaseDate": "4/13/2016",
             "price": 6.00,
             "starRating": 4.8,
-            "imageUrl": "http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SY1000_CR0,0,666,1000_AL_.jpg"
+            "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
         }];
 
     toggleImage(): void {
-        this.seePoster != this.seePoster;
+        this.seePoster = !this.seePoster;
     }
 
 }
