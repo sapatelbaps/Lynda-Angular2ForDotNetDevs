@@ -1,9 +1,5 @@
 ﻿import { Component } from '@angular/core';
-
-@Component({
-    selector: 'mm-movies',
-    templateUrl: 'app/movies/movie-list.component.html'
-})
+import { IMovie } from './movie';
 
 export class MovieListComponent {
     pageTitle: string = 'Movie List';
@@ -12,7 +8,7 @@ export class MovieListComponent {
     seePoster: boolean = false;
     listFilter: string = 'Titanic';
 
-    movies: any[] = [
+    movies: IMovie[] = [
         {
             "movieId": 2,
             "movieName": "Titanic!",
