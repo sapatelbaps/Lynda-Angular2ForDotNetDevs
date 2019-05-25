@@ -7,6 +7,9 @@
 
 export class MovieListComponent {
     pageTitle: string = 'Movie List';
+    imageWidth: number = 50;
+    imageMargin: number = 2;
+
     movies: any[] = [
         {
             "movieId": 2,
@@ -16,7 +19,7 @@ export class MovieListComponent {
             "releaseDate": "3/13/2016",
             "price": 8.00,
             "starRating": 4.5,
-            "imageUrl": "http://ia.media-imdb.com/images/M/MV5BMzg1MDA0MTU2Nl5BMl5BanBnXkFtZTcwMTMzMjkxNw@@._V1_.jpg"
+            "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
         },
         {
             "movieId": 3,
