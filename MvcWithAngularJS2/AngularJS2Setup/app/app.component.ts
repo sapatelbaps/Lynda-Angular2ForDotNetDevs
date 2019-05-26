@@ -1,5 +1,6 @@
 ﻿import { Component } from '@angular/core';
 import { MovieListComponent } from "./movies/movie-list.component";
+import { MovieService } from "./movies/movie.service";
 
 
 @Component({
@@ -9,7 +10,8 @@ import { MovieListComponent } from "./movies/movie-list.component";
                     <mm-movies></mm-movies>
                 </div>
                 `,
-    directives: [MovieListComponent]
+    directives: [MovieListComponent],
+    providers: [MovieService]
 
 })
 
