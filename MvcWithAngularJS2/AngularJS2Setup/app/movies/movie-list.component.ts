@@ -18,7 +18,7 @@ export class MovieListComponent implements OnInit {
     imageMargin: number = 2;
     seePoster: boolean = false;
     listFilter: string;
-
+    errorMessage: string;
     movies: IMovie[];
 
     constructor(private _movieService: MovieService) {
@@ -30,7 +30,13 @@ export class MovieListComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.movies = this._movieService.getMovies();
+        // After implementing observables we cannot directly just call the service.
+        // this.movies = this._movieService.getMovies();
+
+        // When we are using observables we have to summon the service by invoking the subscribe method.
+        this._movieService.getMovies()
+            .subscribe(movies => this.movies = movies,
+                error => this.errorMessage = <any>error);
     }
 
     onRatingClicked(message: string): void {

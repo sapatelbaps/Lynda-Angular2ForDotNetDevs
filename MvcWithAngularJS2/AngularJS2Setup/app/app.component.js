@@ -11,6 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var movie_list_component_1 = require("./movies/movie-list.component");
 var movie_service_1 = require("./movies/movie.service");
+var http_1 = require('@angular/http');
+require('rxjs/Rx');
 var AppComponent = (function () {
     function AppComponent() {
         this.welcomeMessage = "Welcome to My First Angular Project in VS 2015!";
@@ -20,7 +22,7 @@ var AppComponent = (function () {
             selector: 'my-app',
             template: "<h1>{{ welcomeMessage}}</h1>\n                <div>\n                    <mm-movies></mm-movies>\n                </div>\n                ",
             directives: [movie_list_component_1.MovieListComponent],
-            providers: [movie_service_1.MovieService]
+            providers: [movie_service_1.MovieService, http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

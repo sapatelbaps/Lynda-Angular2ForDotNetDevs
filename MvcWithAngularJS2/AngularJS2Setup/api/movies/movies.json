@@ -7,7 +7,7 @@
     "releaseDate": "3/13/2016",
     "price": 8.00,
     "starRating": 4.5,
-    "imageUrl": "http://ia.media-imdb.com/images/M/MV5BMzg1MDA0MTU2Nl5BMl5BanBnXkFtZTcwMTMzMjkxNw@@._V1_.jpg"
+    "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
   },
   {
     "movieId": 3,
@@ -17,7 +17,7 @@
     "releaseDate": "4/13/2016",
     "price": 6.00,
     "starRating": 4.8,
-    "imageUrl": "http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SY1000_CR0,0,666,1000_AL_.jpg"
+    "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
   },
   {
     "movieId": 4,
@@ -27,7 +27,7 @@
     "releaseDate": "9/9/2016",
     "price": 16.00,
     "starRating": 3.5,
-    "imageUrl": "http://ia.media-imdb.com/images/M/MV5BMTg5NTUwNDIyOV5BMl5BanBnXkFtZTgwMjI2OTc3OTE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
   },
   {
     "movieId": 5,
@@ -37,7 +37,7 @@
     "releaseDate": "9/9/2016",
     "price": 14.00,
     "starRating": 5.0,
-    "imageUrl": "http://ia.media-imdb.com/images/M/MV5BMjA4OTE0MjAwNl5BMl5BanBnXkFtZTgwMjY4Mzg2OTE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
   },
   {
     "movieId": 6,
@@ -47,6 +47,6 @@
     "releaseDate": "9/10/2016",
     "price": 16.00,
     "starRating": 2.2,
-    "imageUrl": "http://ia.media-imdb.com/images/M/MV5BMTk2NzUzNTgyNl5BMl5BanBnXkFtZTgwNjkzODM2OTE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+    "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
   }
 ]

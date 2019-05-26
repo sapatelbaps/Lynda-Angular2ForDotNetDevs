@@ -9,34 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+var Observable_1 = require('rxjs/Observable');
 var MovieService = (function () {
-    function MovieService() {
+    function MovieService(_http) {
+        this._http = _http;
+        this._movieUrl = 'api/movies/movies.json';
     }
     MovieService.prototype.getMovies = function () {
-        return [{
-                "movieId": 2,
-                "movieName": "Titanic!",
-                "movieStar": "DiCaprio",
-                "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-                "releaseDate": "3/13/2016",
-                "price": 8.00,
-                "starRating": 3.5,
-                "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
-            },
-            {
-                "movieId": 3,
-                "movieName": "Jaws!",
-                "movieStar": "Shaw",
-                "description": "When a gigantic great white shark begins to menace the small island community of Amity, a police chief, a marine scientist and a grizzled fisherman set out to stop it.",
-                "releaseDate": "4/13/2016",
-                "price": 6.00,
-                "starRating": 4.8,
-                "imageUrl": "https://www.baps.org/Data/Sites/1/Media/Linkimage/Thumb_Home_FS_Bhagwan_swaminarayan.png"
-            }];
+        return this._http.get(this._movieUrl)
+            .map(function (response) { return response.json(); })
+            .do(function (data) { return console.log("All: " + JSON.stringify(data)); })
+            .catch(this.handleError);
+    };
+    MovieService.prototype.handleError = function (error) {
+        console.error(error);
+        return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
     MovieService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], MovieService);
     return MovieService;
 }());

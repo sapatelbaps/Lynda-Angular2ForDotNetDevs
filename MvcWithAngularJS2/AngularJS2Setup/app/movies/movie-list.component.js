@@ -24,7 +24,12 @@ var MovieListComponent = (function () {
         this.seePoster = !this.seePoster;
     };
     MovieListComponent.prototype.ngOnInit = function () {
-        this.movies = this._movieService.getMovies();
+        // After implementing observables we cannot directly just call the service.
+        // this.movies = this._movieService.getMovies();
+        var _this = this;
+        // When we are using observables we have to summon the service by invoking the subscribe method.
+        this._movieService.getMovies()
+            .subscribe(function (movies) { return _this.movies = movies; }, function (error) { return _this.errorMessage = error; });
     };
     MovieListComponent.prototype.onRatingClicked = function (message) {
         this.pageTitle = 'Movie List: ' + message;
