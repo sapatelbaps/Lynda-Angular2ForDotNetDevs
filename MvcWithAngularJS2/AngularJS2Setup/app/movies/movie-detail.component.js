@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var movie_service_1 = require("./movie.service");
-var MovieDetailComponent = /** @class */ (function () {
+var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var movie_service_1 = require('./movie.service');
+var MovieDetailComponent = (function () {
     function MovieDetailComponent(route, router, _movieService) {
         this.route = route;
         this.router = router;
@@ -42,9 +41,8 @@ var MovieDetailComponent = /** @class */ (function () {
     MovieDetailComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/movies/movie-detail.component.html'
-        }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router,
-            movie_service_1.MovieService])
+        }), 
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, movie_service_1.MovieService])
     ], MovieDetailComponent);
     return MovieDetailComponent;
 }());
