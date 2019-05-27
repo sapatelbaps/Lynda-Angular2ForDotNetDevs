@@ -18,7 +18,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>{{ welcomeMessage}}</h1>\n                <div>\n                    <mm-movies></mm-movies>\n                </div>\n                ",
+            template: "\n\n\n ",
             directives: [movie_list_component_1.MovieListComponent],
             providers: [movie_service_1.MovieService, http_1.HTTP_PROVIDERS]
         })

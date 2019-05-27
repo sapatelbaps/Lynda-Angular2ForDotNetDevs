@@ -6,11 +6,10 @@ import 'rxjs/Rx';
 
 @Component({
     selector: 'my-app',
-    template: `<h1>{{ welcomeMessage}}</h1>
-                <div>
-                    <mm-movies></mm-movies>
-                </div>
-                `,
+    template: `
+
+
+ `,
     directives: [MovieListComponent],
     providers: [MovieService, HTTP_PROVIDERS]
 
