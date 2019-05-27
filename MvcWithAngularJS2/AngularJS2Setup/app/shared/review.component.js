@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var ReviewComponent = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var ReviewComponent = /** @class */ (function () {
     function ReviewComponent() {
         this.ratingClicked = new core_1.EventEmitter();
     }
@@ -20,20 +21,19 @@ var ReviewComponent = (function () {
         this.ratingClicked.emit("This movie got a rating of " + this.rating + ".");
     };
     __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Number)
+        core_1.Input(),
+        __metadata("design:type", Number)
     ], ReviewComponent.prototype, "rating", void 0);
     __decorate([
-        core_1.Output(), 
-        __metadata('design:type', core_1.EventEmitter)
+        core_1.Output(),
+        __metadata("design:type", core_1.EventEmitter)
     ], ReviewComponent.prototype, "ratingClicked", void 0);
     ReviewComponent = __decorate([
         core_1.Component({
             selector: 'md-review',
             templateUrl: 'app/shared/review.component.html',
             styleUrls: ['app/shared/review.component.css']
-        }), 
-        __metadata('design:paramtypes', [])
+        })
     ], ReviewComponent);
     return ReviewComponent;
 }());

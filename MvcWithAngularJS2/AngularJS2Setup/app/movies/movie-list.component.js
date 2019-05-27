@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var movie_filter_pipe_1 = require('./movie-filter.pipe');
-var review_component_1 = require('../shared/review.component');
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var movie_filter_pipe_1 = require("./movie-filter.pipe");
+var review_component_1 = require("../shared/review.component");
 var movie_service_1 = require("./movie.service");
-var MovieListComponent = (function () {
+var MovieListComponent = /** @class */ (function () {
     function MovieListComponent(_movieService) {
         this._movieService = _movieService;
         this.pageTitle = 'Movie List';
@@ -41,8 +42,8 @@ var MovieListComponent = (function () {
             styleUrls: ['app/movies/movie-list.component.css'],
             pipes: [movie_filter_pipe_1.MovieFilterPipe],
             directives: [review_component_1.ReviewComponent]
-        }), 
-        __metadata('design:paramtypes', [movie_service_1.MovieService])
+        }),
+        __metadata("design:paramtypes", [movie_service_1.MovieService])
     ], MovieListComponent);
     return MovieListComponent;
 }());

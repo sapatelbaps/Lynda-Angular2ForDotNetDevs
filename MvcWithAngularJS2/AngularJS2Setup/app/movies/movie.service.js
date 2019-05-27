@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-var Observable_1 = require('rxjs/Observable');
-var MovieService = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
+var MovieService = /** @class */ (function () {
     function MovieService(_http) {
         this._http = _http;
         this._movieUrl = 'api/movies/movies.json';
@@ -26,9 +27,14 @@ var MovieService = (function () {
         console.error(error);
         return Observable_1.Observable.throw(error.json().error || 'Server error');
     };
+    // Added for routing
+    MovieService.prototype.getMovie = function (id) {
+        return this.getMovies()
+            .map(function (movies) { return movies.find(function (m) { return m.movieId === id; }); });
+    };
     MovieService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http])
     ], MovieService);
     return MovieService;
 }());
